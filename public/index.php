@@ -20,6 +20,12 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
     require $maintenance;
 }
 
+// live server code when upload live server uncommend this line commend above line then move this file public -> project file
+// if (file_exists($maintenance = __DIR__.'/storage/framework/maintenance.php')) {
+//     require $maintenance;
+// }
+
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -33,6 +39,9 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 
 require __DIR__.'/../vendor/autoload.php';
 
+// live server code when upload live server uncommend this line commend above line then move this file public -> project file
+// require __DIR__.'/vendor/autoload.php';
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -45,6 +54,9 @@ require __DIR__.'/../vendor/autoload.php';
 */
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
+
+// live server code when upload live server uncommend this line commend above line then move this file public -> project file
+// $app = require_once __DIR__.'/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
